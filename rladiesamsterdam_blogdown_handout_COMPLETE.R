@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------
 # --- Blogdown R-Ladies Amsterdam webinar
-# --- 16th April 2020
+# --- 16 April 2020
 # --- Aurore Paligot: presenter, Janine Khuc: host & moderator
 # --- Based on https://bookdown.org/yihui/blogdown/
 # -----------------------------------------------------------------------
@@ -43,7 +43,8 @@ blogdown::update_hugo()
 # time to explore the templates before downloading anything. 
 
 # Option 1: download lithium, the default template, by running
-# the blogdown::new_site() function
+# the blogdown::new_site() function in the console of your new
+# project
 
 # Theme 1: lithium (default)
 
@@ -51,7 +52,7 @@ blogdown::update_hugo()
 # Hugo: https://themes.gohugo.io/hugo-lithium-theme/
 # GitHub: https://github.com/jrutheiser/hugo-lithium-theme
 
-blogdown::new_site() #downloads lithium theme
+blogdown::new_site() #lithium theme
 
 # Option 2: download one of the templates recommended by the 
 # authors of the package documentation. These templates are 
@@ -62,7 +63,7 @@ blogdown::new_site() #downloads lithium theme
 # of the function blogdown::new_site(theme = 'user/repository'). 
 
 # To save you some time, I listed a few recommended themes below
-# with their demo, their GitHub link and their hugo documentation. 
+# with their demo, their GitHub, and their hugo documentation. 
 
 # Theme 2: ghostwriter 
 
@@ -159,21 +160,25 @@ options ( blogdown.ext = '.Rmd',
 # --------- 5.1. Create a new R Markdown file -------------------------
 
 # Note that you should always create your posts under the /content/ folder,
-# in the apropriate subdirectory. In the case of the lithium template, 
+# in the appropriate subdirectory. In the case of the lithium template, 
 # create them in the /content/post directory.
 # The /static/ and /public/ directories will be automatically populated 
 # with the right files anytime you save the progress made in /content/. 
 
-# 5.1.1 Create a new post with the blogdwon function
+# 5.1.1 Create a new post with the blogdown function
 
-# To create a new post, you can use the dedicated addin or run the funcion
+# To create a new post, you can use the dedicated addin or run the function
 # 'blogdown::new_post()'. What happens if you try to run it without 
 # specifying any argument? 
 
 blogdown::new_post (title = 'my first post')
 
+# Check the different arguments of the function
+
+?blogdown::new_post
+
 # Check the extension of the file and your name: they should 
-# correspond to what you previously set up in your .Rprofile. 
+# match with what you previously set up in your .Rprofile file. 
 
 # 5.1.2. Create a new post with a different author name, a few tags,
 # and a markdown extension
@@ -188,17 +193,21 @@ blogdown::new_post (title = 'my second post',
 
 # --------- 5.2. Write your first post with R Markdown ------
 
+# For a quick presentation  of the R Markdown syntax, check 
+# Help > Markdown Quick Reference or Help > Cheatsheets > R Markdown
+
 # See R markdown cheat sheet
 
 ## Create a post with 
-# - a header
+# - a # header
 # - a list
 # - **bold** and *italic* text
-# - a link
+# - a [link](link here)
+# - plain text
 
 ## Or
-# 1. a r code (only the formula)
-# 2. a r code (only the results)
+# 1. r code (formula)
+# 2. r code (results)
 # 3. a graph
 
 # Don't forget to save your progress! 
@@ -215,10 +224,10 @@ blogdown::new_post (title = 'my second post',
 # An easy way to hide a draft is to change its extension temporarily.
 # For example, change a .Rmd file to a .Rmkd file. 
 
-# -------- 5.5. Preview your wesbite in your web browser ---------
+# -------- 5.5. Preview your website in your web browser ---------
 
 # To preview your website, you can use the dedicated addin or 
-# run the funcion 'blogdown::serve_site()' in the console
+# run the function 'blogdown::serve_site()' in the console
 
 blogdown::serve_site()
 
@@ -226,7 +235,7 @@ blogdown::serve_site()
 
 # --------- Step 6: Update the config.TOML file -------------------
 
-# This file contains the structure of your wesbite and is the first to be read. 
+# This file contains the structure of your website and is the first to be read. 
 # Don't change anything that you're not sure about and in case of doubts,  check
 # the general Hugo documentation and  the specific README documentation that 
 # you can find on the GitHub repository of your template. 
@@ -244,31 +253,50 @@ blogdown::serve_site()
 
 # 6.5. (Optional) Change the website logo
 
-baseurl = "/"
-languageCode = "en-us"
-title = "A Hugo website" # change the title of your website here
-theme = "hugo-lithium"
-googleAnalytics = ""
-disqusShortname = ""
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"] 
+# baseurl = "/"
+# languageCode = "en-us"
+# title = "A Hugo website" # change the title of your website here
+# theme = "hugo-lithium"
+# googleAnalytics = ""
+# disqusShortname = ""
+# ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"] 
 
-[permalinks]
-post = "/:year/:month/:day/:slug/"
+# [permalinks]
+# post = "/:year/:month/:day/:slug/"
 
-[[menu.main]]
-name = "About"
-url = "/about/"
-[[menu.main]]
-name = "GitHub" 
-url = "https://github.com/rstudio/blogdown" #replace the link 
-[[menu.main]]
-name = "Twitter" #suggestion: modify "Twitter" by "LinkedIn"
-url = "https://twitter.com/rstudio" #replace the link 
+# [[menu.main]]
+# name = "About"
+# url = "/about/"
+# [[menu.main]]
+# name = "GitHub" 
+# url = "https://github.com/rstudio/blogdown" #replace the link 
+# [[menu.main]]
+# name = "Twitter" #suggestion: modify "Twitter" by "LinkedIn"
+# url = "https://twitter.com/rstudio" #replace the link 
 #[[menu.main]]
 #name = "LinkedIn" #suggestion: add "LinkedIn" section
 #url = "https://twitter.com/rstudio" #replace the link 
 
-[params]
-description = "A website built through Hugo and blogdown." #change description
+# [params]
+# description = "A website built through Hugo and blogdown." #change description
 
 # --------------- End of Step 6 ------------------------------
+
+# -------------- See steps 7,8,9 in the slides ---------------
+
+# --------- Step 10: Update the url of your website ----------
+
+# 1. Update the base url of your config.toml file
+
+baseurl = "https://mywebsite.rbind.io/"
+
+# 2. Create a _redirects file under the /static/ 
+# folder and redirect your default Netlify and 
+# http subdomains to your primary domain
+
+http://random.netlify.com/* https://mywebsite.rbind.io/:splat 301!
+  
+http://mywebsite.rbind.io/*  https://mywebsite.rbind.io/:splat 301!
+  
+# --------------- End of Step 10 -----------------------------
+  
