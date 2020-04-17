@@ -9,7 +9,7 @@
 **Host & moderator:** Janine Khuc 
 
 **Material**
-- [Slides](https://github.com/aurorepaligot/rladiesamsterdam_blogdown_handout/blob/master/rladiesamsterdam_blogdown_presentation.pdf)
+- [Slides](https://github.com/aurorepaligot/rladiesamsterdam_blogdown_handout/blob/master/R-Ladies%20Amsterdam_16-04-2020_Blogdown_Aurore%20Paligot.pdf)
 - [Exercises  (without solutions)](https://github.com/aurorepaligot/rladiesamsterdam_blogdown_handout/blob/master/rladiesamsterdam_blogdown_handout_INCOMPLETE.R)
 
 **Source**
